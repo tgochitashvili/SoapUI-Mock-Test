@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="45638b78-bd59-4a74-b629-8370931beac7" activeEnvironment="Default" name="DogREST" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="8344595b-a510-4c99-a34e-6337255aa749" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://place.dog" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://LAPTOP-E746KMIA:8080/</con:endpoint><con:endpoint>https://place.dog</con:endpoint></con:endpoints><con:resource name="200" path="/300/200" id="d4dbc6b3-ba5e-4996-8deb-9b625b1a9b83"><con:settings/><con:parameters/><con:method name="200 1" id="2cd6729a-9ff4-403e-8f11-3a631e17e848" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>image/jpeg</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="98c5d1cd-de2c-435d-9295-a944be837a72" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://place.dog</con:endpoint><con:request/><con:originalUri>https://place.dog/300/200</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:restMockService id="76c6f30c-9ea7-49a8-b309-a1cc6ccd4c48" port="8080" path="/" host="LAPTOP-E746KMIA" name="Dog 1"><con:settings/><con:properties/><con:restMockAction name="/300/200" method="GET" resourcePath="/300/200" id="c1a5d9a4-8469-42b0-be9a-261fef7f58e5"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+// Script dispatcher is used to select a response based on the incoming request.&#13;
+// Here are few examples showing how to match based on path, query param, header and body&#13;
+&#13;
+// Match based on path&#13;
+def requestPath = mockRequest.getPath()&#13;
+log.info "Path: "+ requestPath&#13;
+&#13;
+if( requestPath.contains("json") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "JSON Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on query parameter&#13;
+def queryString = mockRequest.getRequest().getQueryString()&#13;
+log.info "QueryString: " + queryString&#13;
+&#13;
+if( queryString.contains("stockholm") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response Stockholm"&#13;
+}&#13;
+else if( queryString.contains("london") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response London"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on header&#13;
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")&#13;
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList&#13;
+&#13;
+if( acceptEncodingHeaderList.contains("gzip,deflate") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "GZiped Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on body&#13;
+def requestBody = mockRequest.getRequestContent()&#13;
+log.info "Request body: " + requestBody&#13;
+&#13;
+if( requestBody.contains("some data") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response N"&#13;
+}&#13;
+*/&#13;
+</con:dispatchPath><con:response name="Response 1" id="6d561bb0-590d-4333-ab1b-833761301bac" httpResponseStatus="200" mediaType="image/jpeg"><con:settings/><con:responseContent><![CDATA[ÿØÿÛ?C???????????????
+?
+
+		
+???????????????%???#??? , #&')*)??-0-(0%()(ÿÛ?C????
+?
+?
+
+?(???((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ????È?,??"???????ÿÄ????????????????????????????ÿÄ?J??????????????	?????????!??1A?Qa?"2q�‘?B¡#±ÁÑ?%Rbáð?$3Cr²ñE‚’¢£?&46Scdƒ³ÿÄ?????????????????????????ÿÄ?$??????????????????????!?1?A?"Q23�?ÿÚ????????????ß³^Šð?¯? o^aqä†ƒ¸ã?&‹žú­·üÆŠä<P§?•’]?¿õ­¿O™®]™aƒÿ??iú×·3$???ž•
+¯bÆÄšà’!¦ã?ÅG{ää!TæšKÆ?dÍqÅ„Œ??N)ë	Ñ¤’?âE?Øô=ê’Ké?°È?¨Ó1lÌ�†ŒlU°Wäh7F¢­ÐI1?ÎzPî½ÄÖ:u¬±‹”ñÈå?NJçlíÞ†u~ †Xž+�Rh“?€¹-ö ?ÍZ9æhl ^~�—v>¤ö¤O3ê(¯?Œ»“-¸»ˆ?S’?K?$†Þ?,Ò2àòôÎ:ùu¡ûOÃÁnÄr¢8 ?ñ?ßþµ?ÕäŽáCxŒ0$*v'ÈyÕ&£=å½»¼¡!N˜?BúŸ:R‹›*µ?¡¾$Ôå‚ÆX,?E'`ÈzoßÌÓÐÍ%­²< êóÂ²º?È›ûÇÔ�UZ~ªd™Ó?ÖÈ?ì7�ç8Éýô_ÂwÑÆšÖ·¬:´²(U\~PvP;?€Såp�$Nšœ­�]]Úp†–©¼×R/¼ìv?ÈP?­Å?7–áb<¬\’SËµTq^µuªêSKqÌ?>ËÐ(òÅTCsá��ªðøÉ.RÛ$Íä¶øÇ¢öÄ³ÝÛ™˜†,?sÜçô£­F?BâÊe6?L²&?ŠÄ�†FEf–PÞêI$‘)d¶?Ùº??�¸?âèê±%ËÉ4*?œ?Ç†??Ÿ^�+9à×Ûð><¯ëúIá­^îó@‹CxL°0Ê°Á=zŸ*r÷GÑt–¹šý€¹å÷N0?Žã?‡ø‰®x;‹e“LyW�¼X‘s…?¸?ùU?êZ†©~“\È?ø@”OuSmÇÏùÖ?')'?IìÜ²¨Å©+h ÑfÒå¹g‚d†ip‚5???_óëE-=Ø¼³?¨x•ËG&r ãcX�¬!œ1r=|¨¿„¸–];Ã‚VYlYðÑ¹Ï)þÐ£›Ç}ÅÙØ<•üÉPiÆÜ·«?Ÿg?w?J¼ÊÌ?!ÎçåY–•«ê:=ó2–?Ÿxo‚+H×ZâÖXµ-:Ö;˜¤��y†J�0FG_<úÐÍž©¤\Å »³‘YöÙ�
+}<¨`þ:´?ÿ?éwL/Ñx’=nÀÚ]?ÎªZ?;??lÓv°Ç–¹TG'r?~!äG�T_è²i?k<
+Þ?±	”ƒºù¯ëV??Þ5ª¹%É?ýz|ÅO(%¸•BmÔeÙyeÄv/?Ç?�?Vå?L¼yÿ?‹òýh×NÖe…c?|D8èãôÚ±Éb—NÖå’?Lr?uðœ)ÁìAØŠ7Ò¤·hTÛ$‘Éñ<M±?ÐtûTþF(Òhn?�¶Ÿ£iáþ'd?Ew?´]U¹pÊ>]èÖ?Žâxna`Èc#˜w?‚+*Ðnÿ??‘A?,‰*–ÊìC?n<‰?hÛ„.ž+›�:fæ?y£í?¸ý3õ?›ãM¤¢Ý¢_+?Ü’¦?
+ôW‚½?iç±
+ê¼?íq�KÚÍÀ¶öo¯¾pZÜÆ>l@«??·ü7
+èðàþÎÎ%ÿ?È(gÛÌ¥}žÉ
+õ¸º‚,yûÙþ?qi?†Ò?ÇD�T}?+^ƒ?DÞÜcy1Qe¼*?mp?õlTHý•´ËýeÅšÕÆzˆŠÄ?J—oì£… !®"¿¾næâíŽ~ƒ?”�y?wšþ—o“q©[/ÎQCšç?hr>–¶÷Âq?¡?ïá)|*ç=?iVœ?ÂÖmÍmÃºxo9#ñ?þlÕå­½½šrÚÚZÛ¨í?J¸û
+í?¶e·?k?üÅì´­jìžž?‹ãî@§c½âkŸþ?ƒõ?vk™#„~¦µ	nXu—?Ë5Á¹Œ?³?>•Öƒ³46?{9?ºv�d§ÿ?­vd#è¢™‹Eâ¹õïèÛ® °¶ÿ?UüIkkBØ÷ùyrÇëšÒf¼Nl*ÐÏŒO?]È7eÓ�?å™[ùWYÔR^pl°£5ÿ??k—˜?¤?�/Ü
+¨¹2é6’[ÚÛÜ?mÙŸ2“óó¢ívg[v{›¦·¶�y˜¦?1ëœšù÷Žxâñ.?8µKÇ\ÿ?³f?àôé�é?å7Å?cQ‚äÈÜg¬¼2´n¤)ü¿?5TéZä?‡h!R�#{ÁNH?¶~ô5<×z½Èg?FpyŽãùÑ6…¦­„J	?`[˜Žõ§Ž0�>Ã?’œít?Zê?Y[á[?F[lãm€ n$–k›Ôˆx™cºuå'µLÕ5ahøˆsrn\Ž¦®øZ5�"{�Ú\òþ2N}Îÿ??ýÆ³?Ár?'Íñ?5->K?¶´'—‘GŒàl™íóªþ'šHÕaGhm–5!q€Þ§ëV¼[tÐr[ÈH˜??»’ÇÎ©8ÆêÚæê(
+´lbCÎ§#¦1÷?ïOÇm¦K•¤šE?ìR=¤S»ssä+?øíUÍ¸Éø…?i1Ås`Ö?·,ŠKFÃ½UO`ñL@L�ÚªŒ½?J>Ã¯gÚ@¾á}L¢¨•?7)üä.G7˜Ïj?áÝ~M?Y{‰‰•??�?Û=ªÇOâYtž?k{,­Ì’H$qÔ??�ÜGÒƒØ??˜õ¬B?N\úc'‘%?=£è;�[GâŽ?º»±h%Ômã?¨e÷Ã&èqôÁ¬jöòÒö[‰¯¤”OŽeP=ÒÇ¨¨?&¥>�~—6þó®ÅOB;Š÷Q…#Ô§
+?DÃ�1Ø?‘öéô¬bÀ±¶¯F²ù?*N¶Fk�"DŒ?Ž§¹5Ê?‹�ÞñØz
+ò{Y`*d???Ê|Å3Ì?`õìj¤‘3¦»ì²ùÿ??ÖWLLlyâÉÎ?òúU‡´¾
+·´¿]GLUX®QgdN€Ÿ‹o˜Í?û>»k[yË¿,xÀf;&ù8­/ÆþœÓdä¸?R ¨?èzŒüóú×“—–<Í®�[?eÂ“ìíYn¢HfPWðÅ?1`?cô¡ibM?Z		?…•Q•³‘³}zQ?±u%¦™i«Ã?cŠHüEÀæÎ
+‘úš‡®ÚG­ÙØê?.%’ÜòK?7Å?9Ûäk0ußL|ÕõÚ$k??ZöŠÉ?„¿BÍ?éÌ3Ð?
+áû�NÒe‚Y˜›w(¼Í–?î‡=¨ÂÆòr??^0ìLlêU”öÏ¯lÐ—?Ûƒ~/ÓÝ’CûP;8ê~£?»?ç.ŒæŠÿ?Höh¶ZÄÖ—‘ßX?ÌR???ù€êGÒ¶Î?º‚ëZ°»µ`Ö÷?–VÎã~‡äIû×È?={<z¬¦Ø3´ŸµåSñ?ø€­çÙ§?G?Ûþkv9?¸ÿ?'µbQød¯ rùâë³è1^Õe¾©?ñ,ˆ	V???|_Çß"¬M3Ìqh™J£‹Ø?æûÓ‘Í?¶?�>TlÍ3;öÚ?ðpµˆÁüF­?WÌ?¿¾´&êh?Ú?þ/Ú??ÚlU'–á‡È?~ê<&‹è0!%ã*?€O™¦¦¾“?`S=©©:?Éº=üDŒ7c½rdcÔšmzW´?<rI¯wÅqÔÓ�²Šã†[vª[\7?ê?Ý±€}ÝÍ]?µMaÿ?Î?¿¥¥°ý\Ñ9”?Ô'?iLÌ	Q?ÊÃ³?è>¬GÒ¾Z±�õ?DÝÝó2?,Ì{ž¿zúOÛ
+Ø?\Ð‚?Lf6f??pyGÚ¾x0Imi?@±ŒÊzt,Gò?!-º?âø«.ÛÀµHg‚(Ògø9‡6?ž;“Qšé™¤æ˜—mòÛŸ*°ÖcŠÄË3o?0¨�qÜŒýÉ?¥
+púËuu4Ò«??ï7aä(/²±—Åñ#êÈ^kh”Ÿ?I?zõÜÑ?•­Æ5=FNCã<«?G·"œcéµ?ê’…¼@Ç)???ó¨Z<¯/?ª??y‚ãÏ9Í7‡(lS›Œô1>µw&¡)gi	c×?5ìë5Åâ3*“€9Hé�ƒ^ßÆº|Ÿìù®�y°GÀ?O©?5k¤Ø²[-ÕÔM,ò?Ù¡è¾¦¶ÚŠ´%EÊTÆ—‡ï?¬�??ÅŸ*´Ô9ì­P\´RÌ??¬€ã×5mg¡jWòr+4 ì¤�¨�xKXÒí�µ+8î­Øo”Î~F’òßlrÅ]#"¼ýº¸ä
+Ã??„S?:tÓÊ#‰K±ò?­CCáh5MJä[FÂÜFìÈw)Žßº�Ñ{N?³ü%¬Aõ??<’`~Ì?Ê3ß?ýkRòT4b>;žÌfÓ€ïÅºÏ<b2OÀÍï}«‹¾?»…]�±lm�Õ¬ÚXEqz¦ôÜ]ûáŒ?1T$t?õ4C©-…½µÃÞÁ?©hùR?Èf?>â�ü©YBñcGÎ¶±$Ìln”£?îs
+ÔúUUæž,.æ†uø	$�.Øô¢ž%y<ríl#@pœËï?�Žj·[Íö�o~§2?áL¸Ï}�Y	;Oô“$?5ø?Á{$1?€?3��Ì*.áN"‘5??2‡ÀL?¶íAS???Ò¦èñ?fåÉæ??÷§d„e?bqNQ’£jÓo Ô¢»Ó.IX®ýõ?~?ë·Ôf£éÖ·??Ôð2ø–Ò?"Œî{8ùÿ?…?ÝÞÊ®®ŽL¨?gÉ†Õ¢hš­¾§¦È%!î?:ù?_Ô}«ÊÉ??®™ìâÈ§§Ú?íoï`âÈ­nçyàiW�±ê¹?ÇÒ�¹t¸šòß<â2J1ò??CQ§RÜAn@Ä¶sç?c1�x?¦â™YŠ]Fýýáó?µnK¦.-í2¢Í�•øhœ¬ÑJ]?ÓÏ×§Ö´ž?ÔÍÝ«O
+)å|?/ºy�Lc¡ôó [�9æÔ¬fµO?Å•SÃ'?Ùéþ}*ç�–?â?!±µ•V?VEæ;b7ß?sG4c’?/?–<•é›Ï
+ñ?£?=”?‹Ë¦Exàf?dæéƒÓ4BüM¯[çñ¼?¬?u0rJ?CYd?S[.‰­@á²¡9³Ô¦à×ÒÚ?©?©¦ÛÝDÀxˆ?©ê§Ê³âVá yÖšœWfnÜ}a?Åö“­YŸþí‹�÷?õ¿´N?çRu5�ü¥FOÞ+S?=
+F¸°´¹Ïâ-må?ß�[÷Š·á^™çü¯ðÇoø£FÔ½¬è?qêV­ik§ÌLž(åçb@?ó£¶×l¥<Ñ_[?í‰?þ5gwÂ?9v
+Ühzl€õÍ²?Ü*�ý–pS±oôzÑsÙ?(û?\ñ_°¬©z$¹ÇzeŽsO6?Þ›(3S�?]–¼cµtS?	¦ÙO�p?W­u!Ú¸@ùí^HHê+Ž=]ê�Lbx»\ïˆm†>�Ví<q�y€5E¢J¿é??IŸuc¶Éÿ?ºÔQÅ7?h°j7:u¼éâ?ñ$˜ù
+°~õ‘êÜ0c?Ë?L‚Ü??Ä?‡®ÿ??¾õ·ÞÞKu$­m?ç|(•º"ŽŸ=÷Å?ñE„ƒJ¼dg{x›30mäcü{“ô¤»[EP’t™�M?wÑ$S2¼#—˜ç9+Ðæ£j÷?z]ŠC?@¯ù?1>uÉ¸¶³–R�!�'?œäP¯?ë0I?Ge?æÏ½+?·Ë=«¡?'CrMB7ì«¹™^êNoˆ’Øò?Þ–Æ?Ee?r@ù`ÓvÉÌH+ï‘ÌÌ|¨¿ÙÎ�?¯«I=àÿ?Pµ?ò?|Dô_Ò¬””"Û Œ\ä’ ÚZ\êZÄ7w‘?SÃ?Åÿ?0QŽly?Qÿ??éo|ÁÑD1?’0ÜúïÐU•¦–/$’òüˆ£žLŸ ƒáP<¨¦ßXÓ¬Š?HaäAŽgP?ò¯?&W=E?„1(m²Ç‡4Ûdå?	�q´œ„ýhÒÜÚ¥¹·¸@ð¿BGOâ
+?i?}âJÑÌ°?v?½3MjÜF¥ù¥_?�Á?ñ¨Üd™BjJ‹M3‡m´�CR¹Œ¯‡2¨\|òGéCú„sÜÞÍ#ÄKNÄŸ_JöïŠ!‘??{§s½;¥q?“H9ÑX)Ý‰é[n^ÌñH«:NªÍËnñÛ/¡å?nõ*ßJD—ÅÔoPÈF2F[è?JÔôÍWE¾µ?à[J„n??ß5I¯iZ?üÆÝ$´cÑ¡c·Ò¹Éþ˜Œ¾ÔâÌ³Š8SLºNd‰ÌG|¸aŸ­ez–‰?�¨´P‡H?r¼Lv+æ§¸­?Œ4]NÆWk-BKˆ”?©r??—z?·¾’êV³½a"g?)Ù‘»dUxe$­;B²¨ÉÓTÌÏ\²ü?£4h?‡œ¦|»T�?0°•T?\‘Wüeg�FÞ6?œ±nzì
+WB¨–Qª&YˆÇß5èóå?yß??³ÙÑÏ2.K??×5'A»};SI?trÈà÷ÆÆ¦@?XÈBóx€oé“TÖ?Zuf9V‘œ}k?i¦3¦š?	7?_ˆ´æÈ
+??ÎØéšnÙR[Éc ‘?
+üñüéÍ>T‡J›Ã?¸ÏOL?š†×?ef·?>øÜ�Û#üjZ½?Ý+-U†�)…&?D˜fÆëÛ#Ô?T?+ýWÅ—Vw?˜ºÉm×?cüñúÕö¼¬÷¶WQ¦-Þ6�¤ÏVa�MPÉj×œB/#Ê¤¬­žàà?áZ…qiû3’ù*ôÍƒÙÄKa?—12%»ÈÑ±òÁëôÈ>¢¾‡ák/Ãpý„R®%H€'¿Ÿñ¬KÙV�,œBó�Â3?S èY†?\?µ}?nd»c??òÅ+?¶Ø<‰4”G— lk¾cç\ŠF¨DOc�ÛÎ‘‘¼ë�Ò‘£É™¤?“\1?n@ª[íJVr°žTóïTZ—?éÖC:Ž§?~� ÏÚ²�ë?¥»†0s ù
+‡&§?äV'Ö�×ŠEë?Ð´�OU|l`�‚ÿ?â;S:ƒñ’I¦‹�>ÏGŠúé-?§“Æ‘K?yŠ©éµ?,?�nu?�ÃÊµS©kÖV€›ýF?½?@?Ú¥ÁìÙnT>¹Äz¥è#xà+o?è	«�'�øcI�Ki£Z™‡ûÙÇŠÿ?vÍu#­€‘qL7²•Ñ´ýOTs°6öíÉÿ?ˆàT‹]?Œ®o/®?ÏNÓb½ðù…Ôþ$Š?HøSnþu¨Ís?Q„?ª l«°?J‚÷ª?*3ó®³¶?Zð?åÄ¿×\Ew<Xÿ?ag?�?×sAþÑ"ƒM‚ãIÒ.�m°?‹žrN:s~úÒoCß¸?I"ÆÙÊ#•?£ ÛÎ€øÛV‡L³š×K‚5�¡?‚áP?ˆçô¥M�Ã¦|ýªs?Š?¨?	ïC×‹?s1%˜?ð|è§ˆ.æš2äŽi?¼ÝóA7åË/6Ã?SNÂ¬?Ù'N?w; ø¤`ƒ?±p•”:~‡#0Qnžó“·ˆßô¬«‚-ÍÆ¶‘?,T?ÿ?xì+Dã[Ãk¤ÛÙBØ�˜©#m€ÜýM+ÉûI@g�Qƒ™OÄ<Ms¨¹ŽÝÚ?`yT
+¶óÿ?
+§[‰Øx%äd'8-ßÌÓV�?™?>?lª:»?Õqem(tC??í¸ïò­Å(é?“”�°×„µ©???¤`3Æ>"s�™ëWw?xÔ'å“??;?ÝY�Ö§6ƒ%À„?vÁ&¡ÇÇ?óG•��ùX?ã]ð9m?Y”?3L¼Ñ991#?Œ?oQ–Ùí¤	4ë?·ÂIå?�3�¨^ÇÚ!´HãºD,Ý2qúU–­Ä°êZ$Ï?ðç+�?céKøe?´3æŒ–™a¨kzÎ”UmZ	`#eñ³Ÿ¥Zpç?jW“??EÌ7xÝÁÀõ?U–Á§M*O(™C?¸?àúUå…½Æ—u?É/3?îKÐŽØo0FÕÓÇ?£1É+¿FÃª@º½²I?øw
+=èýG‘¬�_Ó¹5O?(Âå°Ý°Gb(óD×"º²Šÿ????Ã¦~?:Š‡ÄÑCqrÓ¬j?¿??fo?CQ&ñÊ‹iM???¤¯q?Àû­?Œã¶(u$ÿ?f î?£>#³??®O+g?þF?
+‡?¸ì¿®kÔñåÊ?›ž<gdö—–Þc’[|?¥1
+´"?Ø‘?8ßÏµ9?Aƒ?8^þµ?\	oIè?ßNÔä&ö?ðõÂó–1“îàŽÄU·?ZÅsÃ¹´bÅ%%�ê?‡—¡¡hå?�?ÆàÆÛæˆômB	L‹+ˆä+¸;«zÔY"Óä‹±É5Å”zn«%¢Ce{‰ r?Ïå â­¬íÞYZ(?und?ÚSåTšý§,èñáX?eÇO•\ð“Íslë<>?æÌG;äo�ô­Nœy#8íKƒ>•öY?–¶?†�Ý•V@Ã®Ã?5¦[¾[??æÞ²ßdºÂ<?ØÞ0r?ÙJNàù?×???¤`ëF|§Æ[=?«¾Cå^?ÅTˆ­?×µå*æ?1´öX³ûÜEÄZž OX >?¦ôM£ð/?hÄ=†‰h%?ø³)•óç–ÍO}Eˆ÷???[™?âsG“5ÄµyÒ%?Î?GE]‡ØP??\	µŽ?	žQªÇŒÿ?Àõ|ìIÜÐ¿?Žmc†wÿ?´Ôÿ?é½e=„07o?\Šv¦?ÎÝXšâSÒ¼?(?âFÎså\ö?˜çš¹ÏJ!;t&2??ˆÀ'µdžÐ£æd‚5 JÀ?:„\áså’	­nVä�›Ò²þ*ÓšH®®.K¤1Ãâ??IÏE?3úRæ;?lÂx†æ2ÒÛ?¬Aø—Ðþê?¼‘šbÇ8ÎÛö¢~ Y#¸‘’ ¥�A¿(Í	Ü?/¾3œæªÃUb3·ÈÒ½•Ø"Y\ê?=àÞéõÿ?&—?Ý4Þ??r0\“äMXð�?ü%?¦Þ9,>@: ½Åæ¨A�?¤n<—·ß÷TŸÖVß¢¥õÄ�ü.�@?(Ržì{n?}»Ÿ3ô¦,/ƒÞ7½–S»?ðã®õ?X¹`Â?s¿ÂÁNày?üj©n<?ýÃžÇ?:¢?µb%=Ð]Ä1A}?LTâ0?·Üƒß4$–°Û¬¾?6	ÎOéW?{5Ë?ŒÞé?tìºK]`Û?L’?w?Å2/Ž˜¶¹?—–?qs?ˆø }±G¼?Ã“ê71?Æ?Õ7e?ŽoóåU?ú_-Â,í•#¢í½?Zk¿Ñð??ð2Œã¨?þÕœ“mTMã‚NØCp,,¯c„¾-˜òûÿ??�§5›?A?�ä?³?È¯³gû§¡ù??:­½ÍÃ-Ë?I=Ò?"?ÏjFõ•%ÓnÉ–?f?êA?®}?�HâÊ”—C:=ÛÚ^]XH~1�Ç¿lüúUí½ÓÜirøŒs??í± ¹§t˜HÙsnåƒ÷(q�|ñ±¢Í2Dü|°‘˜nã?Gä|Çï¥fU±¸_¢»S�g
+ÊG,Ã?>}3Y�êµ¥ûÀv?ýà+H˜?k‹Rø(ä?zÿ?ž”?Å?Íø¡:€9º�ï
+ŠéÐŸ&6¬­¹œÆï�”t?J­RÊù?‘ƒš—¨‡gˆ&á‡JsKµŽBL�Ê??nÝò*ë¤AVè•ÎÒ4?{mó?5?–rU±áû¤?â«ùÌr†?eóîjê-5îâa?ìžúúŽâ“6‡ÂÞ‘q£é©®Kmfò•v|F£c¸;�­M?\öš“ÙÆçÃæd��æ*@#Ðïš™À|-?»ªEn5wÒõ6�??f_ÙÊ@øAÎsŸÒ�8?„ïxŠ÷R²Ô??JÂà‡?À{ÊÜ’|ò1úR?ü?¤“Ù'�ì®m­3:²µ»´R0üŒ?ò?¸5ô?Ž¤ík	‘y‰A’?_Z?°à?«hfa¨s<Ê?‰#Ý¶Æø¦ÛLãk?#Ó†“y?^ç,²:1Ç‘¥âÅ8ÍºìÎ|ØòA+è8?„dî¬+¯ÆÂÃâÇÎ€N­Åö„?î?’QÝ­.VOÒ˜Ÿ� ²\êú.³`¹
+^[RW'¶FjŠ—á%GÑ¢¬Ñ�ÃŠëÄ_1YÜ?Ð¸ZfåmR8?û3+!?qV‘ñ?‡*?‹W±e=?Ž¿Îƒ°ñDŽV?UÃ?;S ×?k�Œ??ïC¼K“­p¾?ý¥Ÿý7¢8ûüè‰?�{†?;~<œúž¹?a?Û0?¥œ
+õÔ9?ÕÄ‘àlÆ€Nz«|«Œô¤ùT<Ì¸5?Ý?p74BO›?�|ê�Š4Øît‰�<ÌØE�±=³è+ÍOU?¨f¹ž(!Q’ÎÁq÷®.ná�G[ÉçT´p?LÇÝÁèså½??G)qgÌ¼}gý?8�?—`yÛ=Nw ?b2\ò€I­ƒÚf—nD7¶�?ŠîGºÀç?ÏÏsY”14w‹1]¹ùŽG­3?©Q¬±·f�e?ÙØÛ[??ƒ??¾¤dÐ-¼¾?’JÊ?à°ß»14aø…¾C<?™^#ŒùíA—Q5¸› äí½M‡úv?3Ò¢¦òfM”Ÿ?ö?ƒÏëMM‹T@ýz�Qg’F›<Ø=3Wš~š²?Úà<¾ïº?a^Ž¢�>Ü˜Ý–¢a†f?ôä^Ýzþ•dº£=Â½µâ¤a¹|'8Ï©ô«…áïÄ[?EEP>?UMÆ‹$??Åƒß"—É1Ê,™ew?Š??HUçVV?ŸJgW¸
+ÌÐº”|IÊ§á?¨¨ç@<¹ç?¿º1Šm´É#“˜?1å(G]¨}[4í!Åv:[€@žÝÕ‘»�sü¿Zº7«wa
+Ò(ñ ?#8??øý?éC‚)¡nWèF>~U7‡çðäž?ÿ?fÊ\?Ò±8èèËešÜC%ñÙ¼"I?ôaŒ¯ÜmVÚS?fH”‘øv-?>‡qöÞ†m@‡S?–Â”VB{€ØýÔIl?‘™AßÇÆ|ÆjLÊ‘^?²O?*?Ç™6i"??îE?q?¼Äç?Û£-qZAh??7'ÜÖ}ÄÒr_I??`rþµ¿?6Ð<¹Rel7*ÒÆd?¬m¸ô©ÖÊ–óÊ#?á�dgòç¸õ¡å“•ÎN	«Ky?Ž=úço‘«å?Î„­„ÑGi=žÉï§Æ¹Ø�:±Ñäü?Ô3ÀÁÕ?C&w?HÊ0úmó?-?í
+ÌE??ò§?Å?¤>?´¥±€ˆ??y?~„T¹??âvlÜ?m¦êº5áTOÆ[?5°?Q”äã¿ò­#Ùf”¶ÚÆ¡¨†2Mzž,ò?¹‘›™¿æ?éXß
+[=´Ö·vÍ"?�?¦åq�ñßc[ç?ÂÖ÷?v)4XÀè¥OîÁ?J—?ªT;È�cl6æ¯C?\�^b¯Rhñèí�E?{O‘¦N?³VÁ¸ÕàÈó?“ü¨Í†â�øÛöÜqÁ?£r.eœ�øS­w6Í$�cw¤é·á¿?§ÙÜg¯‹
+·ï?I?³Î?žBòpþžXùG�ÐQ?Hé^s·™¢²/`âý??í\1®‰?d�?B¸¿†,á¹ÛÈR
+Gãêj‡‰?õï?�ÿ?5¿þMN¶§#gÂPƒÌÐ·?q?Qk?*ÇâÞÝ[Ü<�?ª?dÞ6?Ý?¤QH?AÕÕìp?)Ë6:
+®»Õ?)feŠ1Ô“üj¢ÛLã?qŒ‹cm¡Û·ûÛöç”�H—§ÔÕ¥—³�/ÅYuë«ÍrqÚåù!?Ò5Ûïšê?Ø=/?ZÜNÖú\wZ½ØØÇe?“?Õ¾?÷§4k.$â;‹È^km?+YDR©?=ÆyCmùFÇÖ´ŒZi¶¢?H¡¶…G»???GÐPŸ?ÊË®L§Þ7çþD¢Ž¢F›À??´¿ˆ¿Ž]Zì¿Ô?ÄßÑ>?ö«ÛÍ6ÊîÀÁ<?ÒÛ·»áH€§Ú¡µÄ’?YŽ)àÕTg½?ÍQšñ�³ø®lÙlãD÷¹U#\
+Î:|¾Â²þ.à™-?âHËµ¼RxjÁvÉ?}zí_M¶^&RH?1±Å?kÚLš¾…%�¿$?£‰"$n]NAô?š®†)Þ™ó§ômî�£G{à°²?§3uf?F>µC«bîÉ.¢ÈV^b;ƒZ¯´‹Dƒ…-áhž;ƒ;™#bI?s�—ï¬fÞîNI¢}Ðä?;QŒ}†RÕ
+èÖ?O9že?«¸SÞ‹t�2Iî<W\ªîGlö?S CÍ9
+‘„Àõß½?i‘ø0ÈHÃs?úùV²LÄ y?,rª?´‡·e?tÝÌñ›¨íÂ)fox�þ•åì¦Þ6äÀ¹”`tfªTcˆaLœ*?…./ØÆOdA?…P{ŒTúÔYà‹ÀŠXÔ?v$t>U1â?ëÞÛ˜œyT??Œ‘?Ÿp2F=(ÙÀþ§lQ‹?J?’<¾USm,qj")?€ÌY?õü¿¾�¯,`[?Nÿ?/:?â='Ã�$\#ÆÛc¡¦Æiªb¥?�ž][‘e*·2Œ¨õ?IjÅ-Õ:?pß­Sé?ø¶‘?9)¸?¬nn<?xÈ?ùØ
+Ÿ"å¢¬Uc<UtbhŒG£?ÛÎ�¸…šY?›wÇ¼sÖ®u‹¶i?±'-œg°¡Ë¹LÎÌwª<xq¢o"|´V0æ�?¹«XÉ?Æ§òg?Z�?ÍÎGMêt?Ï?'«??çTÉ“A?­Á’X?óÍ?ZL·?I?ä‘'<„÷?ÛüúU=­»s‚½#\g×½^i??L’BŽQ?&¤Ë$Y†,Þý‹Æº„r$‘í%«Æ§—bN…m¼?aø[TæÙ€+�­d>ÉeŽÒ?ÒßŸ’,�Ø??c5¹@ÁâFR?0?#½#ÇI‡Í”–½3¼W˜¯iUtyÖpÃzÏõSø�mZ$]E¶›,¿"ÄŠÐˆÉ 
+=?í«U“9?šlq?BÇ4(Òaá®?§H®H¬4?ÌcW×í,Fu?èÑ�Hó–o’�Í5b8‡Z?ÑôG··n—z™ð?æ?ã?aGÜ;Ãz?‡?“HÓ Š^÷?~Òfõ.Ù5cs{
+?YùÛïGC¶?Z{>7?­ÄzÕÕ÷smf?
+?È‘ï0úŠ)Ó´Ý;CƒÁÒ¬­¬"î"@?|Û©?3MÍ©;¯ìÀQUï+HÄ±'5–ÃE¼º‚F?(æo:­–îY[s�ä)’v®S­pE3?ÔÕ7?ìÚ¹ó¿“þU«y7&ªx?š‰?ï¦þ?¹?ËaµL?ýXTE?�?I>Uwm¥]O?â>AæûQJô€ÝvW¡È®€÷?«ëN?T?·˜±òQŠ³ƒMµ„{°©>m½1`“0òÅ?ÿ?´n?›[Ñ¥0DîñÇî?BÇ<Ã==?|÷??ê×Ò]ÉihÆ;b?ÌþèQ“çÛc_gñ†¯ý?¥´âxmP+7ˆéÍ¸?"¯v'ø×Êº§´./âMZQip±?„0��?R€““žÃ=k3ÇÅÕŒ„ù- NÕRÏP�%H|Œ©È8õ£{P$EhÈåaßåþ??¬X\Ûº»]-ÌÜÅ‹®?ÿ?!V??®‹YÅ­Û€­ŽW'`Þ´©Eµ¡ªT]j6ò?¿?�Âc?UYo?.¬d=]Tïä(¡® ¹Py”>7_*­žÕ?É…‡ŠŸ—ÐÖ?£OdˆáçŽrÇ?±“åµPéÃð÷‘£c˜1??:·’èÂ�•ø‡½U*¯qnFÇ8'Ó4P?i?šI?†ÛdP·?YW(*9•‚�»
+)[Ä‰£S¹ Ö„øÏPX­Éæ?¾ ïó¡?ù?MP)>¢¶väD?6ý*=�ÛÝ!–fÉC�>•Uu0Ÿ“�‚¤°?:M<q[º?Ã?�U|j„|›?Ô®VGG]Áÿ?&¡¬[89Å3?!?XûÀÒüP2)RIèiÊ5Ð§+ìæ8ØËÊÀãÖ®ôè?0u??
+?/Z¯¶%�6?#¦Ù«›[Ø¡¶ý€?UïçëKËuHf:öNa?©_?òÄžïÌššoaÍ­ºËÈX?`={??žôI
+¬ç™É÷r:šz;&¸rY|;�Cz?*žXõ±Ë#½?Ÿ³}TÙM?RlØ9ß þuô??ê)s`ñs‚b��Ÿ"9‡ï5òV…tñL—?Ì??¸ÆIjÚ8?Š ±ŠâKøny?‘yÒ2À?¸ß?ŒMÂCsÅd†Í¼?ÒÅ?i¼kÃ—…R-^Ý$?’FðÏÙ±D¶×1\(k{ˆå_4`ßº®S¾Ñæ8Q&€x ?�h?iy�Öh­óÿ?
+ÿ?…?¯¯Z?öVž$œM{�?ªI¿ËoãF¬?;¥^×”?2?¤¬©Ê?òùf¹8=k…é]?´’ÓÆQ�©°‡;?íÎÔ–�Ç?­åšð?u?Sª?¸U?˜ì?ëWÚv‚ò?÷„¢ŸÈ:ý|«Q‹“¤fRQì?‚).e	?4Ž{(«.?á?íÒäê2*ø·2L?3“†9?>temm
+´|�F¨¾ƒ­;UG?_Ð‰eo¢-žŸmh?�?©þÑÜýêU*Tä’è[wØ©R¥D?Qíòõ °Òá‰VY�ä+?ä?°?ùé‘“·©¬zÛJš!~'‘?I¡å‰Tc?98ù×Ô<[m¥põþ£w?s%¬- G?†8Øoæv¯Ÿ­n­õûf¾ðV?¤åAéžŸô¨|…R²Ì.ã@8Ðíc›ðÌ?ÊÑ–,|Çù?j?â}6-.???à85£q!?ˆ®—•f]Áýô
+Äw1jš|ñ°
+I??vÈíKƒÙ¹t?E­Þ&s#??¸AééV0qEÃ„?Ì²)ø³¿Êª�½ª..?uqÙ? ��E2[Ç/,H[ÉœæªâŸ¢w&ƒKN,ç˜E|Ÿ?ÜÃ­X�N8‘%G?K??8Áò¬²g’I??õ¯Zúq?„?•=E?�3¾fƒ]K�n9�cR„�¹ºŒt?5©kw?†?F%FøÏz«yšE?È8??õ¯`Àÿ?‹Î˜±Æ>Œ9¹vHK‡…Yq»?Aò¦‹³?4�ß½{#?À?˜ÒŠÞK‰?Œg®2qZ8î\?â#äõ¨Š
+±"¥4O?/8Øí‘½uà?Ç)?õ4,êlz??ðìrU‡LSPÜ²’ryŽß:™?œÐÇÏ$ñƒ�‚žmü�jµ°áƒ<^+Þ@ˆ}1š\¥?5FO¢6™r¶¨×S"»?„0ÎMYðõÓÏq<óœ»µRëÖ‘Û¤QÃ?Š£<ä
+ªg???ö?e,?F?=	¥Î)ÆÍÁµ*aÖ™!ºÕ ¶¶÷¥'?@Î?�}uìÛE]?… ‚E?iG‰ êwè?¯ó¯—xV(ô{g‘ ñnph²øgç‘Z?±Þ0Ÿý!·±¼¹™à¸rŠYù—¾?Z›?E?ÙFlnp«7{ý?HÔ??ºmœùîð©?|PõÇ³N?i?–p\ØHwæ´¸xñôÎ(Ðt¥^›„_hó-€éÁºÍ‰þªâíE?tŽí?qúÕ~�ÃÜcÂÖ²Ûé÷?>£?“4ì³?‰Ë1ß}Åi?«??CÉ�2q'?Y>/øFæTï%•ÂKÿ?—­4ÞÒ4Ø�%Ö™®A(ê�bÄ�¶ÔwK?Ÿ‹ñ�kðÎV»?Â×}?DXpÝjVŸe5ìœ�¯º>'=?9£X6£9ÆD?pÏü?­?[Á?¼K?*??aNÇ‹žßB§“Ž‘?MÒà±\ æ”õvëôò©ô©UŠ**‘;mö*T©Q?©R¥\p©S7?+?H]csù™y¶ô??šq·?êÜ?,®÷)w?£š?å‡©=B�{?ÞT©åáÚÐÈcç¤Æµ]FÊ-_‰lø°Í:Ý±ŠÔ ÈŽ »??˜�óëYüpÙ�9m¬Z$ƒ—˜å€%»†Çz‰©júÏ?ÜÉ6¢¶òÊà~Í?”�ŽãükË�$Ã¤²Á?‡,Š?±?“çò?U?å{-Œh¡âûûX4á
+ÜÈŽÝHì?\Vk¬­­ÈÅ¤ã•wëñ?úW\_?¢òW¸‘Ú@
+n3�§j?{¾XÌx*qŠv<i«?9lîñ•K?'#n½j®VÁÝw§ÝË?G_3M—??Ÿ‰NÞ¢©J„ÉØÃ3?¸Å2A;Š˜ÇÅOt`w§-a?ŽòŒ?`?Þµtc�•ã9ùT¤?€$}«Ép\œ
+P«»€+˜?$,?ÉîÀC?ë½7qouk(YÃ£�ÆjÖ??›?•?5ÁøOöjžâyîebîÌìrI=k?m›’Hœ“<É½²Èí°#;ý+Ø?ÄN<H€?ß˜b£i·w?Ê?Rª0Øs?Ó×“]´Œ'ÉnàW5°§«,^Qp?8?’§}†*ÙmZÞÛÅ÷²ÃÝiNwôª]&K¤xùW‘AÉ'm¨­4ùµ+UÌª\’räâ¦ÈéÑN5jÁËË??t�$‘pÄƒšs…åXnâl?`z÷?Ó7ú]Í•µÏ9?ª?ó!È>ðþtï?[¨‘%¸%bÇ6?ø‡ž{
+ÔŸÑìÌSSZ??ÞK¸ÖIn?Pó??Ïj³á{Õƒ]Š+0A�p›~bw>»÷¡v¾ŠúhùÐE?~ìkÎq�2=hÃ‡nôû?¸/%_ØÛ�Îç¸ÏAQJÒ¢øÓv}1¥q;Û_®™¬ªÇ(A‰GByAßçF?‚??+æÙxÖMvîãSh<?d`±Žä(ÆkSöaÄÇTŽK)?™¢PG1É?¸ýÄ}iþ/’ù|sÿ?„žOŠ¸|‘ÿ?¡ý*T«Ó<áR¥J¸ã/¸ºXHP9ŸÊ–‘o6µ¨~?IÊŠ9¤Çå_ñ¡ë=?ŠøŽQ%ÛGÃšsïï�-Û�EèŸZÔø7†,8_Mkm?Æv•¼I¦�ùä•±Õ�ðíPãÇÉÑLòRÑqgm?¥ºA??�???õ*UjU¤L*T©Q8T©R®8T«‰Ëˆ_Â?É�w=3CÚÎ�yÈ?ßT¼‚@	iC®? Sî�<úRç>?�F<½—÷<Â"È	e÷°;Ö}ÆPÁ©H‘µÚß[?`mç‰X.qº¶2?Õ^¼FÒØN.$ŸÇ·“Áwg!dÛ àî?ûï�*«Šú+¹Y\r¸=Ž?¨sgçÒ,Ç‡ƒÙäZu½Ÿ$QÁáÆ»?^˜ªÝNôE9.¼ËŽR?è*v¥$Ñ¿/6W± Þ.Ô�¤qžnNrrÄù?Ô„ìp?­Mlnµ?á�Æ¼ggänŽ<�¬«Q–Öid1C%¼€ï?Ü?ó­?�`ü?¶ºµ»??§ßeü¯ØÐ?¹4w?Bá?W|ó�Ó˜wúÕ¸Q>R©„�°?�7á–ld�³R??p	ÿ?
+“o	†æ78`?ÊŸ*}ÐŽ%~?#‘�ië?k»´†GÀ|¨'±ÆÕ'R?nÜ&ÊI"»Óc?Ê²‘²?‚|èrÐTvVK?Ã!Gø‡Zñf(|©ÍBR×R?ŽNsQpZ¶¶-é—6ÓÇ<?§”¸ÛÞ¦/#H°UÔ·÷Nj?1ó?Ž´ìHY°s½?4o“kcž;?Ìk’;ã¥r/'i3Ì|©è•�á~/,g5.Î%¸›�À??š
+¤??Æínfg?Û#µ?ðì©p????ö4+®?x.?­ª®#Ù¤?â=ñéSxgQü?ê2.|ó¾j|‘ä­?b—?S?ït(L?!ÁY˜©ˆõmŽséYÎ¡q, ‰HIY¾?1°òôØ
+2¿×¹!y™•Ÿ“?dÐV«?·ƒÅ…‘Ð?€n?+?wö?žIÿ?#ºUÉy?'˜�úì*ëV½›ðp#8	ÏÍ…Îûc?LÕ/?Ù›‰—¨?	ò4Y¬éRKi?†/u{ç§Öµ7?-™Æ¤â?pýá–/
+?SáÆ? î?­OØ{ÿ?ï%ÓÈJƒ?0{·ý3Xn‰?Ï?Ì³H¿ˆ?Êy?ÄàoÊ~£íZ?•¯?^mSL�”&ça•o&?]ê?ôŸ$__&7?¦}Oœ×¹ ¿f|T8£IiyBÉ		 ??ôô£*ô¡—’³ÄÉ?	qgy¯sMæ½¦,¦(£ÒBÜÜ’?2¦äúÓ|KÅÚ~„¬’?žä¹�?ú“°¥J§–G�?Ç¶Ë1ãY2TºFwwí‚êYJXØC??¬¯Î?ùŒT«/kåbq§ÄÓ/A?…C}Á¥J§Yò'ý?¿??W?½½°ÝKvê-ííbÜ(sÎG–M[i?Ø-?–=r?‰ºx�6Gþ?¿ëJ•?Ÿ$ejAÿ?Ï‰ªâ?ÙqN‰y?/?§jDÃ*?@§õèjåX0??ƒÐŠT«Ññò¼‹g›Ÿ?ÆôWkú”?eƒKqw?®vWq�ý?¹ô¬gˆ½¬Ok+ÙóAv?æILF&Fþò?¸íÓ'?©R<‰¾|}?Á?¸ò`~•us¯érÄC¤SNd’güí�÷ï¶>X«ènSI�RÑy¹F???7Î•*ž‡^Ë›9?kãN|5?d�‹å@~ÓB&—â?Èˆã?Ü“‚)R¬®Âd?7W/gsm"Éø']�??ÌP„ñ?‰€	ÇJTªìL›!Ô?óg"6Çs^½â„*ÊAóÎiR§-ö-èŠ®òÊY?lS¦ìˆùF9ºR¥E£7£‡�˜s6}îƒÒº?oÊ???)R¡a¤{m??åG2÷?<"M:eyw?à`?éR ØR'kWp&¢Ëm?ð?BïÜ÷5??£4è"��’6AžcÛ4©VTU?»dÝcG?Q–¸eñùyŠ÷?f©ì˜‰?Ç$ö¥J—?ÜmšÈ’•"î{'¹¶l‰?'vQú?U)kylîB9E?éŒR¥B?uF¥?Ù7D¿Ž)ÄnyL‡¨=<«D±Õ<$	8ç=?GýiR¥yPZ?âÉÓ?¿ã-)¯M”ÖóÌª¸3BGº|†iÛMNÊ;I?Oñ€}ˆ�`�~T©Rå†0J�,Òœ�Ÿ@ÿ?ìénë êwG>?÷9�>@bµÌÒ¥[‡D9÷6yšY¥JºÅ?ÿÙ]]></con:responseContent><con:header><con:name>X-Dns-Prefetch-Control</con:name><con:value>off</con:value></con:header><con:header><con:name>CF-Ray</con:name><con:value>71eee4692a5695a9-TBS</con:value></con:header><con:header><con:name>Server</con:name><con:value>cloudflare</con:value></con:header><con:header><con:name>X-Content-Type-Options</con:name><con:value>nosniff</con:value></con:header><con:header><con:name>Connection</con:name><con:value>keep-alive</con:value></con:header><con:header><con:name>X-Download-Options</con:name><con:value>noopen</con:value></con:header><con:header><con:name>Last-Modified</con:name><con:value>Tue, 21 Jun 2022 16:50:07 GMT</con:value></con:header><con:header><con:name>X-Permitted-Cross-Domain-Policies</con:name><con:value>none</con:value></con:header><con:header><con:name>Date</con:name><con:value>Tue, 21 Jun 2022 18:43:51 GMT</con:value></con:header><con:header><con:name>Accept-Ranges</con:name><con:value>bytes</con:value></con:header><con:header><con:name>Referrer-Policy</con:name><con:value>no-referrer</con:value></con:header><con:header><con:name>X-Frame-Options</con:name><con:value>SAMEORIGIN</con:value></con:header><con:header><con:name>Strict-Transport-Security</con:name><con:value>max-age=15552000; includeSubDomains</con:value></con:header><con:header><con:name>CF-Cache-Status</con:name><con:value>DYNAMIC</con:value></con:header><con:header><con:name>Cache-Control</con:name><con:value>public, max-age=0</con:value></con:header><con:header><con:name>ETag</con:name><con:value>W/"3508-181872bdc35"</con:value></con:header><con:header><con:name>X-Xss-Protection</con:name><con:value>0</con:value></con:header><con:header><con:name>Vary</con:name><con:value>Accept-Encoding</con:value></con:header><con:header><con:name>alt-svc</con:name><con:value>h3=":443"; ma=86400, h3-29=":443"; ma=86400</con:value></con:header><con:header><con:name>Expect-Ct</con:name><con:value>max-age=0</con:value></con:header></con:response></con:restMockAction><con:restMockAction name="/200/301" method="GET" resourcePath="/200/301" id="0e6395ad-ad4c-4dce-8523-c0e25961eec7"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+// Script dispatcher is used to select a response based on the incoming request.&#13;
+// Here are few examples showing how to match based on path, query param, header and body&#13;
+&#13;
+// Match based on path&#13;
+def requestPath = mockRequest.getPath()&#13;
+log.info "Path: "+ requestPath&#13;
+&#13;
+if( requestPath.contains("json") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "JSON Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on query parameter&#13;
+def queryString = mockRequest.getRequest().getQueryString()&#13;
+log.info "QueryString: " + queryString&#13;
+&#13;
+if( queryString.contains("stockholm") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response Stockholm"&#13;
+}&#13;
+else if( queryString.contains("london") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response London"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on header&#13;
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")&#13;
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList&#13;
+&#13;
+if( acceptEncodingHeaderList.contains("gzip,deflate") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "GZiped Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on body&#13;
+def requestBody = mockRequest.getRequestContent()&#13;
+log.info "Request body: " + requestBody&#13;
+&#13;
+if( requestBody.contains("some data") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response N"&#13;
+}&#13;
+*/&#13;
+</con:dispatchPath><con:response name="Response 1" id="959eda32-48ed-4fe1-87ac-864b4554cc6c" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"Test":"Data"}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
